@@ -1,0 +1,10 @@
+{
+  "id": "quiet-breakout",
+  "title": "QUIET BREAKOUT",
+  "description": "A quiet wall, three chances. Solo only.",
+  "maxPlayers": 1,
+  "accent": "#8663b4",
+  "screenshot": "thumbnail.png",
+  "entry": "game.js",
+  "stateVersion": 1
+}

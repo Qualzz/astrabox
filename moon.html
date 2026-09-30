@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02070d" />
+    <title>ASTRABOX</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./moon.css" />
+    <link rel="stylesheet" href="./src/cabinet.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/node_modules/three/build/three.module.js",
+          "three/addons/": "/node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="lunar-scene" aria-label="ASTRABOX — accueil">
+      <canvas id="lunar-canvas" aria-hidden="true"></canvas>
+      <p class="sr-only">
+        Le robot veille sur sa plateforme à gauche, la Terre se lève derrière l’horizon lunaire à droite et le
+        Soleil brille au loin. L’aperçu du jeu sélectionné s’affiche à droite, avec une flèche de chaque côté.
+      </p>
+      <p id="game-selection-status" class="sr-only" aria-live="polite"></p>
+    </main>
+
+    <section id="game-showcase" class="showcase" aria-label="Sélection du jeu">
+      <button class="showcase-preview" type="button" aria-label="Lancer le jeu sélectionné"></button>
+      <button class="showcase-arrow showcase-arrow--left" type="button" aria-label="Jeu précédent">‹</button>
+      <h2 class="showcase-title sr-only"></h2>
+      <span class="showcase-players sr-only"></span>
+      <button class="showcase-arrow showcase-arrow--right" type="button" aria-label="Jeu suivant">›</button>
+      <button class="showcase-prompt" type="button">A · JOUER</button>
+    </section>
+
+    <a class="controls-link" href="/controls.html?debug=1" aria-label="Régler les boutons" title="Régler les boutons">
+      <svg viewBox="0 0 32 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M10 5.5h12c2.5 0 4.1 1.7 4.7 4.3l1.6 7.3c.5 2.3-1.7 3.5-3.4 2l-4-3.6h-9.8l-4 3.6c-1.7 1.5-3.9.3-3.4-2l1.6-7.3C5.9 7.2 7.5 5.5 10 5.5Z" />
+        <path d="M8 10.5h5m-2.5-2.5v5" />
+        <circle cx="21.5" cy="9" r="1.1" fill="currentColor" stroke="none" />
+        <circle cx="24" cy="12" r="1.1" fill="currentColor" stroke="none" />
+      </svg>
+    </a>
+
+    <script type="module" src="./src/moon-scene.js"></script>
+  </body>
+</html>

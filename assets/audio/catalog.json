@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "kenney-digital-audio",
+      "title": "Digital Audio",
+      "author": "Kenney Vleugels (Kenney.nl)",
+      "url": "https://kenney.nl/assets/digital-audio",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "notice": "/assets/audio/kenney-digital/LICENSE.txt"
+    }
+  ],
+  "sounds": [
+    { "id": "high-up", "file": "/assets/audio/kenney-digital/highUp.ogg", "tags": ["digital", "tone", "high", "ascending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.549, "bytes": 6135, "sha256": "cbc1c3c7ccf5d7903818144a4c3f5b2ed2385095792f29d8d7c76360ba4fa559" },
+    { "id": "high-down", "file": "/assets/audio/kenney-digital/highDown.ogg", "tags": ["digital", "tone", "high", "descending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.522, "bytes": 5803, "sha256": "cdbea353b2e435b4f869c7b045af81079c5d5eb81cfbbc805013ccc3a7a0f36a" },
+    { "id": "low-down", "file": "/assets/audio/kenney-digital/lowDown.ogg", "tags": ["digital", "tone", "low", "descending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.784, "bytes": 5956, "sha256": "e0215fcfd8b9d7877f74d5c46b239a13d7db0d25998da97b80404931ef9eef5d" },
+    { "id": "low-random", "file": "/assets/audio/kenney-digital/lowRandom.ogg", "tags": ["digital", "tone", "low", "random"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.549, "bytes": 5416, "sha256": "ceefeeeb6982838d78ac9059a845ca614b3bd94580a9a9127fd5834d6206f739" },
+    { "id": "low-three-tone", "file": "/assets/audio/kenney-digital/lowThreeTone.ogg", "tags": ["digital", "tone", "low", "three-tone"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.019, "bytes": 7035, "sha256": "b4b3bc7420e71bfbec49a6ea13b8c12d76a5751cbdf063d8a8ac017c0b1e1d87" },
+    { "id": "laser-1", "file": "/assets/audio/kenney-digital/laser1.ogg", "tags": ["digital", "laser", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.1, "bytes": 9315, "sha256": "0bf468769b48a834dc1c6e38e457f2c71159b010225a9aedf84316795e8cc3e5" },
+    { "id": "laser-2", "file": "/assets/audio/kenney-digital/laser2.ogg", "tags": ["digital", "laser", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.091, "bytes": 8524, "sha256": "50470d64f9397855e5d9a334484da9c5232b3e0524c52f088b8a73822bd89f45" },
+    { "id": "laser-3", "file": "/assets/audio/kenney-digital/laser3.ogg", "tags": ["digital", "laser", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.984, "bytes": 8302, "sha256": "caede23d2b65299acdc4e9cab16d06c247d69c7ca1c74caa5e9da21cbdbc1400" },
+    { "id": "laser-5", "file": "/assets/audio/kenney-digital/laser5.ogg", "tags": ["digital", "laser", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.014, "bytes": 8484, "sha256": "8d7b30b35112bedf4dd6f03796a5f33af85414b02947187e4063819fd80cf3e2" },
+    { "id": "pep-1", "file": "/assets/audio/kenney-digital/pepSound1.ogg", "tags": ["digital", "pep"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.522, "bytes": 6019, "sha256": "f2f44effce087e47683f0fea05a71002bd8dca78fb10bf93d9f0b38d49f9590e" },
+    { "id": "pep-3", "file": "/assets/audio/kenney-digital/pepSound3.ogg", "tags": ["digital", "pep"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.444, "bytes": 5590, "sha256": "5e9f2b4a0b14e65a157d0bbcb28cf816926583afa96e753489c722ec3d810a78" },
+    { "id": "phase-jump-1", "file": "/assets/audio/kenney-digital/phaseJump1.ogg", "tags": ["digital", "phase-jump", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.47, "bytes": 6733, "sha256": "c60069ed7108678dd6a1306404d168a93cc2575cda37b06add9dd6c4d46352a3" },
+    { "id": "phase-jump-3", "file": "/assets/audio/kenney-digital/phaseJump3.ogg", "tags": ["digital", "phase-jump", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.444, "bytes": 6854, "sha256": "69e25a1b7b0781f57af84eb4424973ec406d34bc48eed8b6964787b2d74093a9" },
+    { "id": "phaser-down-1", "file": "/assets/audio/kenney-digital/phaserDown1.ogg", "tags": ["digital", "phaser", "descending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.47, "bytes": 7113, "sha256": "d2d046cd0247045f8819905fc9719a7237ccbd590b3128ce58a61a81f50d208b" },
+    { "id": "phaser-up-1", "file": "/assets/audio/kenney-digital/phaserUp1.ogg", "tags": ["digital", "phaser", "ascending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.496, "bytes": 7390, "sha256": "4423d459fc15fdd8593a4584d71e272ec2e5f8bdc11b759db623fc613ffd957c" },
+    { "id": "power-up-1", "file": "/assets/audio/kenney-digital/powerUp1.ogg", "tags": ["digital", "power-up"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.202, "bytes": 9011, "sha256": "8c361b624b560c0bc30ea3063b71212bc30caebf425c9df2481c13b25561485c" },
+    { "id": "power-up-3", "file": "/assets/audio/kenney-digital/powerUp3.ogg", "tags": ["digital", "power-up"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.149, "bytes": 9043, "sha256": "59e7591f7a068882767bc1fd61edabf479b78787466d3a70bc49dfa0533777d2" },
+    { "id": "power-up-7", "file": "/assets/audio/kenney-digital/powerUp7.ogg", "tags": ["digital", "power-up"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.522, "bytes": 5868, "sha256": "9048d651b51f528099c384566b0d4c6c597bee8b56c48f3adab7a901feba0fa5" },
+    { "id": "space-trash-1", "file": "/assets/audio/kenney-digital/spaceTrash1.ogg", "tags": ["digital", "space", "trash"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.451, "bytes": 12132, "sha256": "8f702781627c95cf9f91724dab3bcdb46bb87cc0ccf2a350748798dba6bc82aa" },
+    { "id": "space-trash-3", "file": "/assets/audio/kenney-digital/spaceTrash3.ogg", "tags": ["digital", "space", "trash"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.535, "bytes": 12413, "sha256": "03fd29fd857c67b4401e7ffbc321568229844a10051ae455af497b2335f37d6c" },
+    { "id": "three-tone-1", "file": "/assets/audio/kenney-digital/threeTone1.ogg", "tags": ["digital", "tone", "three-tone"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.827, "bytes": 7361, "sha256": "bdf21eb12e65507f091d074886fdac820e1ccae51d060caa168e5567acadb84b" },
+    { "id": "tone-1", "file": "/assets/audio/kenney-digital/tone1.ogg", "tags": ["digital", "tone"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 0.661, "bytes": 6634, "sha256": "12c6a1955aad54cb04206b5e9985df4379ebc598a01b65070609e0b0a3b9b026" },
+    { "id": "zap-1", "file": "/assets/audio/kenney-digital/zap1.ogg", "tags": ["digital", "zap", "space"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.019, "bytes": 8126, "sha256": "4e4bf11c671a4be0723022a7177f8e122329fa32a0c59555581f4193ed111585" },
+    { "id": "zap-three-tone-up", "file": "/assets/audio/kenney-digital/zapThreeToneUp.ogg", "tags": ["digital", "zap", "three-tone", "ascending"], "source": "kenney-digital-audio", "license": "CC0-1.0", "duration": 1.202, "bytes": 9590, "sha256": "52da0ff5e219179df4521b38276abde0ed6ba27e0cf030b0d1209b8857406eff" }
+  ]
+}

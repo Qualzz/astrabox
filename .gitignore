@@ -1,0 +1,15 @@
+node_modules/
+.arcade/
+.codex/
+.env
+.env.*
+!.env.example
+output/
+.playwright-cli/
+playwright-report/
+test-results/
+.DS_Store
+*.log
+*.blend1
+# Newly generated cartridges are local user data, not release examples.
+cartridges/game-*/

@@ -1,0 +1,10 @@
+{
+  "paddleSpeed": 430,
+  "paddleWidth": 120,
+  "ballSpeed": 335,
+  "ballRadius": 8,
+  "background": "#f1eadb",
+  "paddleColor": "#675283",
+  "ballColor": "#d27f5e",
+  "brickColor": "#8663b4"
+}

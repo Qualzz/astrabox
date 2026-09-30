@@ -1,0 +1,39 @@
+name: Checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      browser_tests:
+        description: Run optional Chromium smoke tests
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  checks:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+  browser:
+    if: github.event_name == 'workflow_dispatch' && inputs.browser_tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser

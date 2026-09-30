@@ -1,0 +1,18 @@
+.workshop {
+  position: fixed;
+  z-index: 20;
+  left: 4vw;
+  bottom: max(5vh, env(safe-area-inset-bottom));
+  color: #f7f8b6;
+  font: 600 clamp(13px, 1.15vw, 20px) ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.workshop-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.workshop [hidden] { display: none !important; }
+
+/* Explicit operator mode only; these elements do not exist in cabinet mode. */
+.workshop-debug { width: min(440px, 84vw); padding: 16px; background: #02070df5; color: #ddd; font-size: 12px; font-weight: 400; line-height: 1.6; }
+.workshop-debug output { display: block; color: #ffcb99; overflow-wrap: anywhere; }
+.workshop-debug-message { max-height: 180px; overflow-y: auto; white-space: pre-wrap; }
+.workshop-debug form { display: grid; gap: 8px; }
+.workshop-debug textarea { width: 100%; box-sizing: border-box; font: inherit; background: #111b23; color: #eee; border: 1px solid #666; }
+.workshop-debug button { margin: 8px 8px 0 0; padding: 4px 8px; font: inherit; color: inherit; background: none; border: 1px solid #667; cursor: pointer; }

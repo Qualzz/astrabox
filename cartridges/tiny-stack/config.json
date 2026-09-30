@@ -1,0 +1,12 @@
+{
+  "initialWidth": 260,
+  "blockHeight": 28,
+  "baseSpeed": 230,
+  "speedPerBlock": 7,
+  "maxSpeed": 420,
+  "placementPause": 0.16,
+  "volume": 0.45,
+  "cream": "#f5edda",
+  "coral": "#df6452",
+  "ink": "#51382f"
+}

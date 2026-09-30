@@ -1,0 +1,10 @@
+{
+  "id": "line-pong",
+  "title": "LINE PONG",
+  "description": "First to five. P2 START opens a new versus match.",
+  "maxPlayers": 2,
+  "accent": "#eee7c6",
+  "screenshot": "thumbnail.png",
+  "entry": "game.js",
+  "stateVersion": 1
+}

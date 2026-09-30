@@ -1,0 +1,10 @@
+{
+  "id": "meteor-dodge",
+  "title": "METEOR DODGE",
+  "description": "Survive the storm. P2 can join instantly.",
+  "maxPlayers": 2,
+  "accent": "#ff9f68",
+  "screenshot": "thumbnail.png",
+  "entry": "game.js",
+  "stateVersion": 1
+}

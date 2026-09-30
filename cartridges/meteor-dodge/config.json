@@ -1,0 +1,12 @@
+{
+  "playerSpeed": 255,
+  "playerSize": 15,
+  "meteorSpeed": 230,
+  "meteorSize": 18,
+  "spawnInterval": 0.48,
+  "duration": 30,
+  "background": "#091426",
+  "meteorColor": "#ff9f68",
+  "player1Color": "#c7eeff",
+  "player2Color": "#ffc96b"
+}

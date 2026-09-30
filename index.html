@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASTRABOX — Play</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./src/cabinet.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "pixi.js": "/node_modules/pixi.js/dist/pixi.mjs",
+          "@pixi/sound": "/node_modules/@pixi/sound/dist/pixi-sound.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="cabinet">
+      <canvas id="screen" width="960" height="540" aria-label="Écran de jeu"></canvas>
+      <p id="runtime-status" aria-live="polite">Initialisation…</p>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

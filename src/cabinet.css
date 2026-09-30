@@ -1,0 +1,229 @@
+/* Shared physical housing, outside the games' own art and CRT passes. */
+body.llm-cabinet-page {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  overflow: hidden;
+  background: #98704a;
+}
+
+.crt-cabinet {
+  position: relative;
+  width: min(100vw, calc(100dvh * 1672 / 941));
+  height: min(100dvh, calc(100vw * 941 / 1672));
+  isolation: isolate;
+}
+
+.crt-picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #02070d;
+}
+
+/* A little overscan hides the shader's distorted outside edge under the lip.
+   This is the scene's real viewport, also used for camera and input sizing. */
+.crt-content {
+  position: absolute;
+  left: 8.851675%; /* x148: overscan under the anime lip */
+  top: 4.250797%; /* y40: exact 4:3 viewport, curved corners stay under the case */
+  width: 69.377990%; /* 1160 / 1672 */
+  height: 92.454835%; /* 870 / 941 */
+  contain: layout paint;
+  isolation: isolate;
+  overflow: hidden;
+  background: #02070d;
+}
+
+.crt-housing {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.crt-instruments {
+  position: absolute;
+  z-index: 31;
+  pointer-events: none;
+  user-select: none;
+  contain: strict;
+}
+
+/* Five illustrated glass tubes, built entirely in HTML/CSS. The PNG behind
+   them contains only the empty mounting rail, never pre-lit letters. */
+.ready-tubes {
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 2.1%;
+}
+.ready-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ready-tube { position: relative; --energy: 0; }
+.ready-socket {
+  position: absolute;
+  inset: 82% 7% 0;
+  z-index: 4;
+  border: 2px solid #21170f;
+  border-radius: 9% 9% 27% 27% / 16% 16% 30% 30%;
+  background: linear-gradient(90deg, #261a15 0 9%, #614329 10% 20%, #422d21 21% 76%, #271b17 77%);
+  box-shadow: inset 0 2px #a17c47, 0 2px 1px #24170bc0;
+}
+.ready-pins {
+  position: absolute;
+  inset: 64% 21% 12%;
+  background: repeating-linear-gradient(90deg, transparent 0 12%, #342419 13% 17%, #b07a3c 18% 20%, transparent 21% 25%);
+}
+.ready-glass {
+  position: absolute;
+  inset: 7% 3% 11%;
+  z-index: 2;
+  border: 2px solid #291c14;
+  border-radius: 42% 42% 24% 24% / 24% 24% 17% 17%;
+  background: linear-gradient(90deg, #93551e69 0 6%, #e1a55126 7% 11%, #301d1980 12% 82%, #b477263d 83% 91%, #e1a55161 92%);
+  box-shadow: inset 2px 0 #dc9b516b, inset -2px 0 #eac39257, inset 0 3px #e8bf7780;
+}
+.ready-glass::before {
+  content: "";
+  position: absolute;
+  inset: 3%;
+  border: 1px solid #a16833;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 66%, #ffb62c7a, #e8730926 55%, transparent 75%);
+  box-shadow: 0 0 8px #f89c354d;
+  opacity: var(--energy);
+  transition: opacity .3s ease;
+}
+.ready-tip {
+  position: absolute;
+  left: 43%; top: 0;
+  width: 12%; height: 13%;
+  border: 1px solid #392619;
+  border-radius: 60% 60% 30% 30%;
+  background: linear-gradient(90deg, #734219 22%, #f4d49d 30% 43%, #916436 55%);
+}
+.ready-anode {
+  position: absolute;
+  inset: 21% 12% 11%;
+  border-top: 2px solid #34261c;
+  border-bottom: 2px solid #916537;
+  background: repeating-linear-gradient(0deg, transparent 0 7px, #b78a4c24 7px 8px),
+    repeating-linear-gradient(90deg, transparent 0 7px, #ad783225 7px 8px), #110d13b8;
+  box-shadow: 2px 0 #c4954155, -2px 0 #281d14;
+}
+.ready-letter { position: absolute; inset: 29% 27% 21%; }
+.ready-rain { position: absolute; inset: 0; z-index: 5; overflow: hidden; }
+.ready-grain { position: absolute; top: 0; width: 3.5%; height: 100%; opacity: 0; }
+.ready-grain::after {
+  content: "";
+  position: absolute;
+  left: -50%; top: 0;
+  width: 100%; height: 1.1%;
+  border-radius: 50%;
+  background: linear-gradient(transparent, #ffd169 65%, #fff8d9);
+  box-shadow: 0 2px 3px #ffb33aab;
+}
+.ready-led {
+  position: absolute;
+  width: 13%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #92511f;
+  opacity: .48;
+  transition: opacity 100ms linear;
+}
+.ready-led::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #ffe7a1;
+  box-shadow: 0 0 2px 1px #ffc14d, 0 0 5px 2px #ff790a87;
+  opacity: 0;
+  transition: opacity 110ms ease-out;
+}
+.ready-led[data-light="settled"] { opacity: .96; }
+.ready-led[data-light="settled"]::after { opacity: .9; animation: ready-deposit 260ms ease-out; }
+.ready-led[data-light="grain"] { opacity: 1; }
+.ready-led[data-light="grain"]::after { opacity: 1; background: #fff6d0; }
+.ready-led[data-light="trail"] { opacity: .7; }
+.ready-led[data-light="trail"]::after { opacity: .3; }
+.ready-reflection {
+  position: absolute;
+  inset: 8% 12% 10%;
+  border-radius: 35%;
+  border-left: 2px solid #ffdda863;
+  border-right: 1px solid #fff1cd9c;
+  pointer-events: none;
+}
+.ready-reflection::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 6%;
+  width: 20%; height: 5%;
+  background: #fff4dccc;
+  border-radius: 70% 20% 40% 30%;
+  transform: rotate(16deg);
+}
+.ready-tubes[data-mode="error"] .ready-letter { opacity: .35; }
+.ready-tubes[data-celebrate="true"] .ready-letter {
+  animation: ready-confirm 2.1s ease-out var(--confirm-delay) both;
+}
+.ready-tubes[data-celebrate="true"] .ready-led[data-light="settled"]::after {
+  animation: ready-ignite 2.1s ease-out var(--confirm-delay) both;
+}
+@keyframes ready-deposit {
+  0% { opacity: 1; background: #fff9dc; }
+  38% { opacity: .58; }
+  70% { opacity: 1; }
+  100% { opacity: .9; }
+}
+@keyframes ready-confirm {
+  0% { opacity: .65; transform: scale(.97); }
+  18% { opacity: 1; transform: scale(1.08); }
+  36% { opacity: 1; transform: scale(1); }
+  62% { opacity: .8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes ready-ignite {
+  0%, 100% { opacity: .9; background: #ffe7a1; box-shadow: 0 0 2px 1px #ffc14d, 0 0 5px 2px #ff790a87; }
+  18% { opacity: 1; background: #fffdf0; box-shadow: 0 0 4px 2px #ffe9a1, 0 0 9px 3px #ffb43ac4; }
+  48% { opacity: 1; background: #ffedbe; box-shadow: 0 0 3px 1px #ffc14d, 0 0 6px 2px #ff981ab0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ready-tubes *, .ready-tubes *::before, .ready-tubes *::after { animation: none !important; transition: none !important; }
+}
+
+/* Pixi fills the entire tube before the CRT pass, with no inner letterboxing. */
+.crt-content > .cabinet {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.crt-content > .cabinet > canvas {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+.crt-content > .controls-link { right: 8%; bottom: 9%; }
+.crt-content > .workshop { left: 8%; bottom: 9%; max-width: 84%; }
+
+/* A phone/operator portrait window remains usable; don't shrink the entire
+   application into a tiny landscape monitor. The cabinet is for wide screens. */
+@media (max-aspect-ratio: 6/5) {
+  .crt-cabinet { width: 100vw; height: 100dvh; }
+  .crt-housing, .crt-instruments { display: none; }
+  .crt-content { inset: 0; width: 100%; height: 100%; }
+}

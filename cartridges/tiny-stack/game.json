@@ -1,0 +1,10 @@
+{
+  "id": "tiny-stack",
+  "title": "TINY STACK",
+  "description": "Un bouton, une pile. Posez les blocs et gardez le chevauchement.",
+  "maxPlayers": 1,
+  "entry": "game.js",
+  "accent": "#df6452",
+  "stateVersion": 1,
+  "screenshot": "thumbnail.png"
+}

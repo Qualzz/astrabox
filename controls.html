@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcade — mapping opérateur</title>
+<link rel="icon" href="data:,">
+<style>
+  :root { color-scheme: dark; font: 18px/1.6 monospace; color: #eff3be; background: #040b0c; }
+  body { max-width: 850px; margin: 5vh auto; padding: 20px; }
+  h1 { font-size: 26px; } h2 { font-size: 36px; color: white; }
+  button, select { font: inherit; color: inherit; background: transparent; border: 1px solid #858866; padding: 10px 16px; margin: 5px 5px 5px 0; cursor: pointer; }
+  button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+  a { color: inherit; } small { opacity: .7; } output { display: block; white-space: pre-line; }
+  #live { min-height: 90px; } [hidden] { display: none !important; }
+</style>
+<h1>RÉGLAGE DES CONTRÔLES</h1>
+<p>Joystick · A B X Y L1 R1 L2 R2 · START · CODEX</p>
+<p><small>Menus : A pour valider, B pour revenir. En partie, A/B restent les actions du jeu.</small></p>
+<p><small>Deux boutons supplémentaires seulement : le bouton marqué COIN sert de START, l’autre de CODEX. START P2 permet de rejoindre un jeu à deux.</small></p>
+<label>Joueur <select id="player"><option value="1">1P</option><option value="2">2P</option></select></label>
+<div id="setup">
+  <button id="pad">Mapper manette / encodeur USB</button>
+  <button id="keyboard">Mapper encodeur clavier</button>
+  <button id="reset">Revenir au mapping manette automatique</button>
+</div>
+<section id="wizard" hidden>
+  <h2 id="prompt" aria-live="polite" tabindex="-1"></h2>
+  <p id="hint"></p>
+  <button id="skip" hidden>Je n’ai pas ce bouton — passer</button>
+  <button id="cancel">Annuler — ne rien enregistrer</button>
+</section>
+<output id="status" aria-live="polite"></output>
+<h3>TEST DES ENTRÉES</h3>
+<output id="live"></output>
+<p><small>Pour quitter un jeu : maintenez START pendant 3 secondes (P1 ou P2). Échap fonctionne aussi au clavier. Passez les boutons d’action absents. Les deux encodeurs identiques restent liés à leur port/index : recalibrez si le système les réordonne.</small></p>
+<p><a href="/moon.html">RETOUR À LA BORNE</a></p>
+<script type="module" src="/src/controls-ui.js"></script>
+</html>

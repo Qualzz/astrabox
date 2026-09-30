@@ -1,0 +1,53 @@
+:root {
+  color-scheme: dark;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #071416;
+  color: #d7fff4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  background: #000;
+}
+
+.cabinet {
+  width: min(100vw, calc(100vh * 16 / 9));
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #071416;
+  image-rendering: auto;
+}
+
+#runtime-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Embedded cartridges share the hub's physical housing, not a second bezel. */
+html.arcade-embedded, .arcade-embedded body { background: transparent; height: 100%; }
+.arcade-embedded .cabinet { position: absolute; inset: 0; width: 100%; height: 100%; }
+.arcade-embedded #screen { width: 100%; height: 100%; aspect-ratio: auto; background: transparent; }
+.arcade-embedded .workshop { left: 8%; bottom: 9%; }

@@ -1,0 +1,11 @@
+{
+  "paddleSpeed": 330,
+  "paddleHeight": 80,
+  "ballSpeed": 260,
+  "ballRadius": 9,
+  "cpuSpeed": 205,
+  "targetScore": 5,
+  "background": "#214438",
+  "paddleColor": "#eee7c6",
+  "ballColor": "#ffce72"
+}
