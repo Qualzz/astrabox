@@ -8,7 +8,7 @@
     "url": "https://github.com/Qualzz/astrabox.git"
   },
   "engines": {
-    "node": ">=22.13"
+    "node": "^22.13.0 || >=24"
   },
   "private": true,
   "type": "module",

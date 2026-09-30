@@ -3,7 +3,7 @@
 ASTRABOX is a small local-first project. Keep changes focused and preserve the
 arcade experience: short labels, shared physical input, independent game identities.
 
-1. Use Node.js 22.13+, then `npm ci`.
+1. Use Node.js 22 (22.13 or newer), or 24+, then `npm ci`.
 2. Read `AGENTS.md` and `docs/CARTRIDGE_CONTRACT.md` before changing game APIs.
 3. Run `npm run check` and `npm test`. Add a regression test for a fixed bug.
 4. Test visible changes in a real browser and describe the route, input and result.

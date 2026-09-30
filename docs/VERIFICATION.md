@@ -39,11 +39,13 @@ launched for these screenshots. Captures show the actual application, not mockup
 - Selecting and launching Meteor through its thumbnail opened its embedded runtime.
 - START P2 joined Meteor and switched Pong to a two-player match.
 - A launched Tiny Stack; a subsequent action placed a block, visible in its score.
+- A launched Quiet Breakout and served its ball into the playfield.
 - CODEX focused the robot without opening the microphone; pressing it again returned
   to selection. Escape returned from cartridges to the same hub.
 
 Screenshots: [menu](screenshots/menu.jpg), [Meteor 2P](screenshots/game.jpg),
-[robot](screenshots/robot.jpg), [Tiny Stack](screenshots/tiny-stack.jpg).
+[robot](screenshots/robot.jpg), [Tiny Stack](screenshots/tiny-stack.jpg),
+[Quiet Breakout](screenshots/breakout.jpg).
 
 The first browser pass exposed an omitted constant after the scene split and
 an existing unbound-fetch MIDI bug. Both were fixed; undefined-name linting and
@@ -58,5 +60,6 @@ a MIDI receiver regression now cover these failures.
 - Windows, hosted deployment and hostile generated code are not validated.
 - Short desktop interactions do not establish gameplay balance or universal frame rates.
 
-CI checks macOS and Linux with Node 22. Optional browser smoke tests can be run
+The initial public commit passed [GitHub CI on macOS and Linux with Node 22](https://github.com/Qualzz/astrabox/actions/runs/36777772197).
+Optional browser smoke tests can be run
 manually using `npm run test:browser` or the workflow's explicit browser option.

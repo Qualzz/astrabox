@@ -6,7 +6,7 @@ for a normal computer.
 
 ## Prerequisites
 
-Raspberry Pi OS Desktop **64-bit**, Node.js **22.13+** ARM64, npm, and Chromium with
+Raspberry Pi OS Desktop **64-bit**, Node.js **22 (22.13 or newer), or 24+** ARM64, npm, and Chromium with
 hardware WebGL2 acceleration. Use adequate power and cooling.
 SD flashing, Wi-Fi, SSH keys and OS installation are separate host setup steps;
 this repository contains no personal network or account settings.

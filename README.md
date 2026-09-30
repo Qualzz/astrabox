@@ -20,7 +20,7 @@ The native Codex voice integration is experimental and tied to the pinned CLI ve
 
 ## Quick start
 
-Requirements: **Node.js 22.13+**, npm, and a browser with WebGL2 and Web Audio.
+Requirements: **Node.js 22 (22.13 or newer), or 24+**, npm, and a browser with WebGL2 and Web Audio.
 Start with macOS or Linux; Windows has not been verified end to end.
 
 ```sh
